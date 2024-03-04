@@ -16,11 +16,17 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import AppointmentModal from '../AppointmentModal/AppointmentModal';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
 
 function Navbar(props) {
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -93,12 +99,17 @@ function Navbar(props) {
           </IconButton>
 
 
-            <Button variant='contained' sx={{background:'#F5DD61',color:'black',py:1}} >Make Appointment</Button>
+            <Button onClick={()=>handleOpen()} variant='contained' sx={{background:'#F5DD61',color:'black',py:1}} >Make Appointment</Button>
           </Box>
         </Toolbar>
      </Container>
 
-
+     <AppointmentModal 
+     open={open}
+     handleClose={handleClose}
+     >
+      
+      </AppointmentModal>
         
       </AppBar>
       <nav>

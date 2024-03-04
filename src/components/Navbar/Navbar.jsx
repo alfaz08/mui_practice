@@ -76,7 +76,7 @@ function Navbar(props) {
           >
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} >
+              <Button sx={{color:'#272727',fontWeight:'bold'}} key={item} >
                 {item}
               </Button>
             ))}

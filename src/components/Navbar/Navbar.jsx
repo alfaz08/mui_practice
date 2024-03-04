@@ -50,7 +50,7 @@ function Navbar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar sx={'background: transparent'} component="nav" color='secondary'>
            
      
      <Container maxWidth="lg">
@@ -62,18 +62,21 @@ function Navbar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            <MenuIcon sx={'color:red'} />
           </IconButton>
           <Typography
             variant="h6"
+            color={'primary'}
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
-          </Typography>
+            Medi Doctor
+          </Typography
+  
+          >
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} >
                 {item}
               </Button>
             ))}

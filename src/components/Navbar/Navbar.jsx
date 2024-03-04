@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -80,6 +81,18 @@ function Navbar(props) {
                 {item}
               </Button>
             ))}
+
+<IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mx: 2 }}
+          >
+            <SearchIcon sx={'color:red'} />
+          </IconButton>
+
+
             <Button variant='contained' sx={{background:'#F5DD61',color:'black',py:1}} >Make Appointment</Button>
           </Box>
         </Toolbar>

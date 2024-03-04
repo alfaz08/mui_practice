@@ -80,6 +80,7 @@ function Navbar(props) {
                 {item}
               </Button>
             ))}
+            <Button variant='contained' sx={{background:'#F5DD61',color:'black',py:1}} >Make Appointment</Button>
           </Box>
         </Toolbar>
      </Container>

@@ -11,7 +11,7 @@ function App() {
     
      <Navbar></Navbar>
 
-      <Grid sx={{pt:10}}>
+      <Grid sx={{pt:8}}>
       <Banner></Banner>
       </Grid>
     

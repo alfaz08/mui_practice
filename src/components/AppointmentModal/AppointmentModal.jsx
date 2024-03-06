@@ -45,7 +45,7 @@ const AppointmentModal = ({ open, handleClose }) => {
       >
         <Grid sx={style}>
           {success && (
-            <Alert severity="warning" onClose={() => setSuccess(false)}>
+            <Alert severity="success" onClose={() => setSuccess(false)}>
               This Alert displays the default close icon.
             </Alert>
           )}
